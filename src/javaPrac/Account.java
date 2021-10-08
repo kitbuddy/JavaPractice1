@@ -1,6 +1,8 @@
 package javaPrac;
 
-public class Account implements OnlineAccount, Comparable<Account> {
+import java.util.Comparator;
+
+public class Account implements OnlineAccount, Comparator<Account> {
     String ownerName;
     int noOfRegularMovies;
 
@@ -49,7 +51,7 @@ public class Account implements OnlineAccount, Comparable<Account> {
         return MonthlyCost;
     }
 
-    @Override
+   /* @Override
     public int compareTo(Account o) {
         if(this.monthlyCost() > o.monthlyCost()) {
             return 1;
@@ -58,7 +60,7 @@ public class Account implements OnlineAccount, Comparable<Account> {
         } else {
             return 0;
         }
-    }
+    }*/
 
     @Override
     public String toString() {
@@ -67,5 +69,14 @@ public class Account implements OnlineAccount, Comparable<Account> {
                 ", noOfRegularMovies=" + noOfRegularMovies +
                 ", noOfexclusiveMovies=" + noOfexclusiveMovies +
                 '}';
+    }
+
+    @Override
+    public int compare(Account o1, Account o2) {
+            if(o1.monthlyCost()== o2.monthlyCost()) {
+                return 0;
+            } else {
+                return o1.monthlyCost() > o2.monthlyCost() ? 1 : -1;
+            }
     }
 }

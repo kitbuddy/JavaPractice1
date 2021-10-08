@@ -35,9 +35,9 @@ public class ShopSalesQuestion {
                     int index = product_stringsList.indexOf(saleProductsEach);
 
                     if(product_stringsList.get(index) == saleProducts.get(index)) {
-                        System.out.println( saleProductsEach + "=>" + "same price" + productPrices.get(index) + " " + salesProductPrices.get(index));
+                        System.out.println( saleProductsEach + " =>" + "same price => " + productPrices.get(index) + " " + salesProductPrices.get(index));
                     } else {
-                        System.out.println(saleProductsEach + "=>" +  productPrices.get(index) + " " + salesProductPrices.get(index));
+                        System.out.println(saleProductsEach + " => different price => " +  productPrices.get(index) + " " + salesProductPrices.get(index));
                     }
                 }
             });

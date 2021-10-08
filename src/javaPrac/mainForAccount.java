@@ -8,7 +8,7 @@ public class mainForAccount {
 
         int noOfOwners = 3;
 
-        ArrayList<Account> accounts = new ArrayList<Account>();
+        ArrayList<Account> accounts = new ArrayList<>();
 
         Account account = new Account("Ankit", 2, 3);
         Account account2 = new Account("seepika", 1, 4);
@@ -25,12 +25,14 @@ public class mainForAccount {
     }
 
     private static void compareTwoAccounts(Account account, Account account2)  {
+//        return
+/*
 
         if( account.compareTo(account2) > account2.compareTo(account)) {
             System.out.println(account.toString());
         } else {
             System.out.println(account2.toString());
         }
-
+*/
     }
 }
